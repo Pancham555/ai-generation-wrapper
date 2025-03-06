@@ -1,8 +1,14 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-import { Menu, Search, Github, Moon, Sun } from "lucide-react";
+// import { cn } from "@/lib/utils";
+import {
+  Menu,
+  Search,
+  //  Github,
+  Moon,
+  Sun,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState, useEffect } from "react";
