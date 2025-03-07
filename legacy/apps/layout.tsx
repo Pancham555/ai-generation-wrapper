@@ -1,4 +1,4 @@
-import { Toaster } from "@/components/ui/sonner";
+// import { Toaster } from "@/components/ui/sonner";
 export default function AppLayout({
   children,
 }: Readonly<{
@@ -6,7 +6,7 @@ export default function AppLayout({
 }>) {
   return (
     <>
-      <Toaster />
+      {/* <Toaster /> */}
       {children}
     </>
   );
