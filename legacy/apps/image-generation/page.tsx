@@ -1,4 +1,4 @@
-import { ImageGenerator } from "@/components/image-generator";
+import { ImageGenerator } from "../image-generator";
 import React from "react";
 
 export default function ImageGeneration() {
