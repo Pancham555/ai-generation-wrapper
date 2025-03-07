@@ -22,6 +22,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 // Style buttons for quick prompt modification
 const STYLE_BUTTONS = [
@@ -342,7 +343,9 @@ export function TextToImage() {
             <Card className="overflow-hidden">
               <CardContent className="p-2">
                 <div className="relative aspect-square w-full overflow-hidden rounded-md">
-                  <img
+                  <Image
+                    width={6000}
+                    height={6000}
                     src={generatedImage || "/placeholder.svg"}
                     alt="Generated image"
                     className="h-full w-full object-cover"
