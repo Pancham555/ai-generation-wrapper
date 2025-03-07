@@ -111,7 +111,11 @@
 
 "use client";
 
-import { ChevronRight, Image, type LucideIcon } from "lucide-react";
+import {
+  ChevronRight,
+  Image as Imageicon,
+  type LucideIcon,
+} from "lucide-react";
 
 import {
   Collapsible,
@@ -189,7 +193,7 @@ export function NavMain({
           <SidebarMenuItem>
             <SidebarMenuButton asChild tooltip="Text to Image">
               <a href="/text-to-image">
-                <Image />
+                <Imageicon />
                 <span>Text to Image</span>
               </a>
             </SidebarMenuButton>

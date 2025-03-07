@@ -4,7 +4,7 @@ export async function GET(req: NextRequest) {
   try {
     const url = new URL(req.url);
     const query = url.searchParams.get("query");
-    const task = url.searchParams.get("task") || "text-to-image";
+    // const task = url.searchParams.get("task") || "text-to-image";
 
     if (!query) {
       return NextResponse.json({ models: [] });

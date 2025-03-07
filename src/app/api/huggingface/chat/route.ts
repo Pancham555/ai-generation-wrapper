@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages } = await req.json();
+    // const { messages } = await req.json();
 
     // In a real application, you would call the Hugging Face API here
     // For this example, we'll return a mock response
