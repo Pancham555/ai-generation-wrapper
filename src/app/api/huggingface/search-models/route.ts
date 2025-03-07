@@ -42,7 +42,8 @@ export async function GET(req: NextRequest) {
         model.name.toLowerCase().includes(query.toLowerCase())
     );
 
-    return NextResponse.json({ models: filteredModels });
+    return NextResponse.json([...filteredModels]);
+    // return NextResponse.json({ models: filteredModels });
   } catch (error) {
     console.error("Error searching models:", error);
     return NextResponse.json(

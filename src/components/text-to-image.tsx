@@ -56,7 +56,9 @@ export function TextToImage() {
   const [prompt, setPrompt] = React.useState("");
   const [selectedModel, setSelectedModel] = React.useState(DEFAULT_MODEL);
   const [modelSearch, setModelSearch] = React.useState("");
-  const [searchResults, setSearchResults] = React.useState<any[]>([]);
+  const [searchResults, setSearchResults] = React.useState<
+    { id: string; name: string }[]
+  >([]);
   const [isSearching, setIsSearching] = React.useState(false);
   const [isGenerating, setIsGenerating] = React.useState(false);
   const [generatedImage, setGeneratedImage] = React.useState<string | null>(
