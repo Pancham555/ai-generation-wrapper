@@ -237,7 +237,9 @@ export default function LandingPage() {
           </nav>
 
           <div className="hidden md:flex gap-4">
-            <Button variant="outline">Dashboard</Button>
+            <Link href="/dashboard">
+              <Button variant="outline">Dashboard</Button>
+            </Link>
             <Button variant="outline">Log in</Button>
             {/* <Button size="sm">Sign up</Button> */}
             <ModeToggle />

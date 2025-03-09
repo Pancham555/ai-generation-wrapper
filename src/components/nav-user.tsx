@@ -1,19 +1,18 @@
-"use client"
+"use client";
 
 import {
   BadgeCheck,
   Bell,
   ChevronsUpDown,
+  Computer,
   CreditCard,
   LogOut,
+  Moon,
   Sparkles,
-} from "lucide-react"
+  Sun,
+} from "lucide-react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,25 +21,27 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
+import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
+import { useTheme } from "next-themes";
 
 export function NavUser({
   user,
 }: {
   user: {
-    name: string
-    email: string
-    avatar: string
-  }
+    name: string;
+    email: string;
+    avatar: string;
+  };
 }) {
-  const { isMobile } = useSidebar()
-
+  const { isMobile } = useSidebar();
+  const { setTheme } = useTheme();
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -100,6 +101,47 @@ export function NavUser({
                 <Bell />
                 Notifications
               </DropdownMenuItem>
+              {/* <DropdownMenuItem>
+                Theme
+                <ToggleGroup variant="outline" type="multiple">
+                  <ToggleGroupItem
+                    value="system"
+                    aria-label="Toggle system"
+                    onClick={() => setTheme("system")}
+                  >
+                    <Computer className="h-4 w-4" />
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="light"
+                    aria-label="Toggle light"
+                    onClick={() => setTheme("light")}
+                  >
+                    <Sun className="h-4 w-4" />
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="dark"
+                    aria-label="Toggle dark"
+                    onClick={() => setTheme("dark")}
+                  >
+                    <Moon className="h-4 w-4" />
+                  </ToggleGroupItem>
+                </ToggleGroup>
+              </DropdownMenuItem> */}
+            </DropdownMenuGroup>
+            <DropdownMenuSeparator />
+            <DropdownMenuLabel>Theme</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              <DropdownMenuItem onClick={() => setTheme("system")}>
+                <Computer className="h-4 w-4" /> System
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("light")}>
+                <Sun className="h-4 w-4" /> Light
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")}>
+                <Moon className="h-4 w-4" />
+                Dark
+              </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
@@ -110,5 +152,5 @@ export function NavUser({
         </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>
-  )
+  );
 }
