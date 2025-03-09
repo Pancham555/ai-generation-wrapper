@@ -28,7 +28,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
+// import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 import { useTheme } from "next-themes";
 
 export function NavUser({
@@ -101,32 +101,6 @@ export function NavUser({
                 <Bell />
                 Notifications
               </DropdownMenuItem>
-              {/* <DropdownMenuItem>
-                Theme
-                <ToggleGroup variant="outline" type="multiple">
-                  <ToggleGroupItem
-                    value="system"
-                    aria-label="Toggle system"
-                    onClick={() => setTheme("system")}
-                  >
-                    <Computer className="h-4 w-4" />
-                  </ToggleGroupItem>
-                  <ToggleGroupItem
-                    value="light"
-                    aria-label="Toggle light"
-                    onClick={() => setTheme("light")}
-                  >
-                    <Sun className="h-4 w-4" />
-                  </ToggleGroupItem>
-                  <ToggleGroupItem
-                    value="dark"
-                    aria-label="Toggle dark"
-                    onClick={() => setTheme("dark")}
-                  >
-                    <Moon className="h-4 w-4" />
-                  </ToggleGroupItem>
-                </ToggleGroup>
-              </DropdownMenuItem> */}
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuLabel>Theme</DropdownMenuLabel>
