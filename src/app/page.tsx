@@ -921,7 +921,8 @@ export default function LandingPage() {
                   See StreamLine in Action
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Watch how StreamLine can transform your team's productivity
+                  Watch how StreamLine can transform your team&apos;s
+                  productivity
                 </p>
               </motion.div>
             </div>
@@ -1062,11 +1063,11 @@ export default function LandingPage() {
                           ))}
                       </div>
                       <blockquote className="text-xl italic">
-                        "StreamLine has completely transformed how our entire
-                        organization operates. The productivity gains have been
-                        remarkable, and the ROI was evident within the first
-                        month. I can't imagine running our business without it
-                        now."
+                        &quot;StreamLine has completely transformed how our
+                        entire organization operates. The productivity gains
+                        have been remarkable, and the ROI was evident within the
+                        first month. I can&apos;t imagine running our business
+                        without it now.&quot;
                       </blockquote>
                     </div>
                   </div>
@@ -1143,7 +1144,7 @@ export default function LandingPage() {
                       </CardHeader>
                       <CardContent className="flex-1">
                         <p className="text-muted-foreground">
-                          "{testimonial.quote}"
+                          &quot;{testimonial.quote}&quot;
                         </p>
                       </CardContent>
                       <CardFooter className="flex flex-col items-start border-t pt-4">
@@ -1179,8 +1180,8 @@ export default function LandingPage() {
                   Simple, transparent pricing
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Choose the plan that's right for your team. All plans include
-                  a 14-day free trial.
+                  Choose the plan that&apos;s right for your team. All plans
+                  include a 14-day free trial.
                 </p>
               </motion.div>
             </div>
