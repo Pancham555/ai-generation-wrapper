@@ -1,5 +1,5 @@
 import type React from "react";
-import "./globals.css";
+// import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
