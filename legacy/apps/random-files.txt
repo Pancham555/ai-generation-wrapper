@@ -1,0 +1,76 @@
+    <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="relative mx-auto w-full max-w-[500px] h-[400px] rounded-xl border bg-card p-4 shadow-xl"
+              >
+                <div className="flex items-center justify-between border-b pb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center">
+                      <MessageSquare className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">StreamLine Assistant</h3>
+                      <p className="text-xs text-muted-foreground">Online</p>
+                    </div>
+                  </div>
+                  <Button variant="ghost" size="icon">
+                    <X className="h-4 w-4" />
+                  </Button>
+                </div>
+
+                <div className="h-[280px] overflow-y-auto py-4 flex flex-col gap-3">
+                  <AnimatePresence>
+                    {chatMessages.map(
+                      (message) =>
+                        message.visible && (
+                          <motion.div
+                            key={message.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className={cn(
+                              "max-w-[80%] rounded-lg p-3",
+                              message.sender === "bot"
+                                ? "bg-muted self-start rounded-bl-none"
+                                : "bg-primary text-primary-foreground self-end rounded-br-none",
+                            )}
+                          >
+                            {message.text}
+                          </motion.div>
+                        ),
+                    )}
+
+                    {isTyping && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        className="max-w-[80%] rounded-lg p-3 bg-muted self-start rounded-bl-none"
+                      >
+                        <div className="flex gap-1">
+                          <span className="animate-bounce">●</span>
+                          <span className="animate-bounce" style={{ animationDelay: "0.2s" }}>
+                            ●
+                          </span>
+                          <span className="animate-bounce" style={{ animationDelay: "0.4s" }}>
+                            ●
+                          </span>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+                  <input
+                    type="text"
+                    placeholder="Type your message..."
+                    className="flex-1 rounded-md border bg-background px-3 py-2 text-sm"
+                  />
+                  <Button size="icon" className="rounded-full">
+                    <Send className="h-4 w-4" />
+                  </Button>
+                </div>
+              </motion.div>
