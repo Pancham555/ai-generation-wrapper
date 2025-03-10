@@ -7,6 +7,7 @@ import {
   BarChart3,
   // Wand2,
   type LucideIcon,
+  FileText,
 } from "lucide-react";
 
 // import {
@@ -42,6 +43,7 @@ export function NavMain({}: // items,
   const aiTools = [
     { title: "Analytics", icon: BarChart3, url: "/dashboard" },
     { title: "Chat", icon: MessageSquare, url: "/dashboard/chat" },
+    { title: "Chat with PDF", icon: FileText, url: "/dashboard/chat-with-pdf" },
     { title: "Text to Image", icon: Image, url: "/dashboard/text-to-image" },
     // {
     //   title: "Text Generation",
